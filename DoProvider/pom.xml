@@ -12,5 +12,11 @@
     <artifactId>DoProvider</artifactId>
     <version>0.0.1</version>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.zx.dbo</groupId>
+            <artifactId>DoApi</artifactId>
+            <version>0.0.1</version>
+        </dependency>
+    </dependencies>
 </project>

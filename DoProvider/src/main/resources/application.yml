@@ -1,13 +1,19 @@
 server:
-  port: 9001
+  port: 8000
+dubbo:
+  scan:
+    base-packages: com.zx.dbo.provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://192.168.13.146
 spring:
   application:
-    name: DoProvider
+    name: SprProvider
   cloud:
-      zookeeper:
-        discovery:
-          enabled: true
-        connect-string: localhost:2181
-logging:
-  level:
-    org.apache.zookeeper.ClientCnxn: WARN
+    nacos:
+      discovery:
+        server-addr: 192.168.13.146:8848
+  main:
+    allow-bean-definition-overriding: true

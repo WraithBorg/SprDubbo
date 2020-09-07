@@ -1,13 +1,19 @@
 server:
-  port: 9002
+  port: 8080
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: spring-cloud://192.168.13.146
+  cloud:
+    subscribed-services: SprProvider
 spring:
   application:
-    name: DoConsumer
+    name: SprConsumer
   cloud:
-    zookeeper:
+    nacos:
       discovery:
-        enabled: true
-      connect-string: localhost:2181
-logging:
-  level:
-    org.apache.zookeeper.ClientCnxn: WARN
+        server-addr: 192.168.13.146:8848
+  main:
+    allow-bean-definition-overriding: true
