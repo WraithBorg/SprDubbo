@@ -7,8 +7,6 @@
 		<module>DoConsumer</module>
 		<module>DoProvider</module>
 		<module>DoCommon</module>
-        <module>SprDoApi</module>
-		<module>SprDoApi</module>
 		<module>DoApi</module>
 	</modules>
 	<parent>
